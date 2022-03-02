@@ -34,6 +34,8 @@ int main(int argc, char const *argv[])
         cout << int(mid_num) << " ";
     else
         cout << mid_num << " ";
+    // below expression will fail
+    // cout << ((mid_num == (int)mid_num) ? int(mid_num) : mid_num) << " ";
     cout << min_num << endl;
 
     return 0;
