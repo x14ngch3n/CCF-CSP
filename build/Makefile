@@ -18,5 +18,3 @@ clean:
 # a very ugly Makefile, every time it needs to re-compile all source files
 # all: 
 # 	$(foreach file, $(FILES), $(shell $(CXX) $(addprefix ../src/, $(file)) -o $(patsubst %.cc,%,$(file))))
-
-# all: $(foreach file, $(OBJS), $(file))
