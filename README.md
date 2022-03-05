@@ -21,7 +21,7 @@ make 20XXXX-X
 
 | Test\Problem | 1 | 2 | 3 | 4 | 5 |
 |:--------------:|:---:|:---:|:---:|:---:|:---:|
-| 201312 | :white_check_mark: | | | | |
+| 201312 | :white_check_mark: | :white_check_mark:| | | |
 | 201312 | :white_check_mark: | | | | |
 | 201403 | :white_check_mark: | | | | |
 | 201409 | :white_check_mark: | | | | |
