@@ -12,9 +12,11 @@ Solutions and instructions for CCF-CSP mocking test
 ## Build
 
 ```bash
-# This will build every source code in src/
+git clone https://github.com/cascades-sjtu/CCF-CSP.git
+cd CCF-CSP/build
+# This will build every problem's latest source code
 make
-# This will build only the target source code after it has been changed
+# This will build only the target problem's latest source code
 make 20XXXX-X
 ```
 
