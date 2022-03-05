@@ -11,7 +11,7 @@ OBJS = $(foreach file, $(FILES), $(patsubst %.cc,%,$(file)))
 all: $(OBJS)
 
 $(OBJS): % : $(SRCDIR)/%.cc
-	@echo $(CXX) $(CXXFLAG) $^ -o $(OBJDIR)/$@
+	$(CXX) $(CXXFLAG) $^ -o $(OBJDIR)/$@
 
 # method two
 # every time it needs to re-compile all source files while only one source code has changed

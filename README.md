@@ -13,7 +13,9 @@ Solutions and instructions for CCF-CSP mocking test
 
 ```bash
 git clone https://github.com/cascades-sjtu/CCF-CSP.git
-cd CCF-CSP/build
+cd CCF-CSP
+# all binarys are located in build
+mkdir build
 # This will build every problem's latest source code
 make
 # This will build only the target problem's latest source code
