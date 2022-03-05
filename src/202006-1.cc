@@ -8,7 +8,7 @@ string isLiner(long long dots[][3], int n, long long line[])
 {
     for (int i = 0; i < n; i++)
         // cout << dots[i][2] << '\t' << LINE(i) << endl;
-        if (dots[i][2] == dots[0][2] && LINE(0) * LINE(i) < 0 || dots[i][2] != dots[0][2] && LINE(0) * LINE(i) > 0)
+        if ((dots[i][2] == dots[0][2] && LINE(0) * LINE(i) < 0) || (dots[i][2] != dots[0][2] && LINE(0) * LINE(i) > 0))
             return "No";
     return "Yes";
 }

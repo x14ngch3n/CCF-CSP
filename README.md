@@ -2,9 +2,22 @@
 
 Solutions and instructions for CCF-CSP mocking test
 
+## Useful Links
+
 * [CCF-CSP模拟测试题库](http://118.190.20.162/home.html)
 * [CSP认证组织与高分经验在线研讨会](https://dl.ccf.org.cn/albumList/getMeetingDetail4930818217035776)
 * [CSP认证真题讲座](https://dl.ccf.org.cn/albumList/getMeetingDetail4995974849611776)
+
+## Build
+
+```bash
+# This will build every source code in src/
+make
+# This will build only the target source code after it has been changed
+make 20XXXX-X
+```
+
+## Progress
 
 | Test\Problem | 1 | 2 | 3 | 4 | 5 |
 |:--------------:|:---:|:---:|:---:|:---:|:---:|

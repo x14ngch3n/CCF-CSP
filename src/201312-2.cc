@@ -13,8 +13,7 @@ int main(int argc, char const *argv[])
     {
         if (i != 1 && i != 5)
         {
-            cout << atoi(&ISBN[i]);
-            ID += i * (int)ISBN[i];
+            ID += (i + 1) * atoi(&ISBN[i]);
         }
     }
     ID = ID % 11;
