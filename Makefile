@@ -1,17 +1,17 @@
 SRCDIR = src
 OBJDIR = build
-CXX = g++
-CXXFLAG = -Wall
+CXX = clang++
+CXXFLAG = -Wall -std=c++11 -g
 
 FILES = $(shell ls ${SRCDIR})
-OBJS = $(foreach file, $(FILES), $(patsubst %.cc,%,$(file)))
+OBJS = $(foreach file, $(FILES), $(patsubst %.cc,$(OBJDIR)/%,$(file)))
 
 # method one: Static Pattern Rules
 # binary is compiled only when the related source code has changed
 all: $(OBJS)
 
-$(OBJS): % : $(SRCDIR)/%.cc
-	$(CXX) $(CXXFLAG) $^ -o $(OBJDIR)/$@
+$(OBJS): $(OBJDIR)/% : $(SRCDIR)/%.cc
+	$(CXX) $(CXXFLAG) $^ -o $@
 
 # method two
 # every time it needs to re-compile all source files while only one source code has changed
