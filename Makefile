@@ -10,7 +10,7 @@ OBJS = $(foreach file, $(FILES), $(patsubst %.cc,$(OBJDIR)/%,$(file)))
 # binary is compiled only when the related source code has changed
 all: $(OBJS)
 
-$(OBJS): $(OBJDIR)/% : $(SRCDIR)/%.cc
+$(OBJS): $(OBJDIR)/%: $(SRCDIR)/%.cc
 	$(CXX) $(CXXFLAG) $^ -o $@
 
 # method two
