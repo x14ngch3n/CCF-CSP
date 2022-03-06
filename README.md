@@ -26,28 +26,28 @@ make 20XXXX-X
 
 | Test\Problem | 1 | 2 | 3 | 4 | 5 |
 |:--------------:|:---:|:---:|:---:|:---:|:---:|
-| 201312 | :white_check_mark: | :white_check_mark:| | | |
-| 201403 | :white_check_mark: | :white_check_mark:| | | |
-| 201409 | :white_check_mark: | | | | |
-| 201412 | :white_check_mark: | | | | |
-| 201503 | :white_check_mark: | | | | |
-| 201509 | :white_check_mark: | | | | |
-| 201512 | :white_check_mark: | | | | |
-| 201604 | :white_check_mark: | | | | |
-| 201609 | :white_check_mark: | | | | |
-| 201612 | :white_check_mark: | | | | |
-| 201703 | :white_check_mark: | | | | |
-| 201709 | :white_check_mark: | | | | |
-| 201712 | :white_check_mark: | | | | |
-| 201803 | :white_check_mark: | | | | |
-| 201809 | :white_check_mark: | | | | |
-| 201812 | :white_check_mark: | | | | |
-| 201903 | :white_check_mark: | | | | |
-| 201909 | :white_check_mark: | | | | |
-| 201912 | :white_check_mark: | | | | |
-| 202006 | :white_check_mark: | | | | |
-| 202009 | :white_check_mark: | | | | |
-| 202012 | :white_check_mark: | | | | |
-| 202104 | :white_check_mark: | | | | |
-| 202109 | :white_check_mark: | | | | |
-| 202112 | :white_check_mark: | | | | |
+| 201312 | ✅ | ✅ | | | |
+| 201403 | ✅ | ✅ | | | |
+| 201409 | ✅ | ✅ | | | |
+| 201412 | ✅ | | | | |
+| 201503 | ✅ | | | | |
+| 201509 | ✅ | | | | |
+| 201512 | ✅ | | | | |
+| 201604 | ✅ | | | | |
+| 201609 | ✅ | | | | |
+| 201612 | ✅ | | | | |
+| 201703 | ✅ | | | | |
+| 201709 | ✅ | | | | |
+| 201712 | ✅ | | | | |
+| 201803 | ✅ | | | | |
+| 201809 | ✅ | | | | |
+| 201812 | ✅ | | | | |
+| 201903 | ✅ | | | | |
+| 201909 | ✅ | | | | |
+| 201912 | ✅ | | | | |
+| 202006 | ✅ | | | | |
+| 202009 | ✅ | | | | |
+| 202012 | ✅ | | | | |
+| 202104 | ✅ | | | | |
+| 202109 | ✅ | | | | |
+| 202112 | ✅ | | | | |
