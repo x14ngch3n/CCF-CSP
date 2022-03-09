@@ -8,6 +8,7 @@ Solutions and instructions for CCF-CSP mocking test
 * [CSP认证组织与高分经验在线研讨会](https://dl.ccf.org.cn/albumList/getMeetingDetail4930818217035776)
 * [CSP认证真题讲座](https://dl.ccf.org.cn/albumList/getMeetingDetail4995974849611776)
 * [CCF CSP 考试和 PAT 甲级乙级考试题解](https://github.com/richenyunqi/CCF-CSP-and-PAT-solution)
+* [CCF CSP认证考试在线评测系统介绍](https://www.cnblogs.com/richenyunqi/p/14892974.html)
 
 ## Build
 
@@ -44,7 +45,7 @@ make 20XXXX-X
 | 201812 | ✅ | ✅ | | | |
 | 201903 | ✅ | ✅ | | | |
 | 201909 | ✅ | ✅ | | | |
-| 201912 | ✅ | | | | |
+| 201912 | ✅ | ✅ | | | |
 | 202006 | ✅ | | | | |
 | 202009 | ✅ | | | | |
 | 202012 | ✅ | | | | |
