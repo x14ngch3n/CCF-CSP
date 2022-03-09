@@ -15,27 +15,27 @@ int main(int argc, char const *argv[])
     {
         salary = tax;
     }
-    else if (3500 < tax && tax <= 5000 - 45)
+    else if (tax <= 5000 - 45)
     {
         salary = COUNT(0, 3500, 3);
     }
-    else if (5000 - 45 < tax && tax <= 8000 - 345)
+    else if (tax <= 8000 - 345)
     {
         salary = COUNT(45, 5000, 10);
     }
-    else if (8000 - 345 < tax && tax <= 12500 - 1245)
+    else if (tax <= 12500 - 1245)
     {
         salary = COUNT(345, 8000, 20);
     }
-    else if (12500 - 1245 < tax && tax <= 38500 - 7745)
+    else if (tax <= 38500 - 7745)
     {
         salary = COUNT(1245, 12500, 25);
     }
-    else if (38500 - 7745 < tax && tax <= 58500 - 13745)
+    else if (tax <= 58500 - 13745)
     {
         salary = COUNT(7745, 38500, 30);
     }
-    else if (58500 - 13745 < tax && tax <= 83500 - 22495)
+    else if (tax <= 83500 - 22495)
     {
         salary = COUNT(13745, 58500, 35);
     }
