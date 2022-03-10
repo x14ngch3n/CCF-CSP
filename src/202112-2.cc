@@ -4,31 +4,6 @@ using namespace std;
 
 #define MAX_LEN 100000
 
-// binary search, O(lgN)
-// int getFx(int A[], int n, int x)
-// {
-//     int left = 0, right = n;
-//     if (x >= A[n]) {
-//         return n;
-//     }
-//     while (left < right - 1) {
-//         int mid = (right - left) / 2 + left;
-//         if (A[mid] <= x) {
-//             left = mid;
-//         } else if (A[mid] > x) {
-//             right = mid;
-//         }
-//     }
-//     return left;
-// }
-
-int getGx(int A[], int n, int N, int x)
-{
-    int r = N / (n + 1);
-    int g = x / r;
-    return g;
-}
-
 int main(int argc, char const* argv[])
 {
     int n, N;
@@ -37,18 +12,26 @@ int main(int argc, char const* argv[])
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
-    int f, g, error = 0, j = 0;
-    // O(n)
-    for (int i = 0; i < N; i++) {
-        // f = getFx(A, n, i);
-        if (i == A[j]) {
-            f = j;
-            j++;
+    // two pointer, O(N), still TLE
+    int error = 0, gap = N / (n + 1);
+    int f = 0, g = 0, prev = 0;
+    for (int i = 1; i < N; i++) {
+        int isChanged = 0;
+        if (i == A[f + 1]) {
+            error += abs((f - g) * (i - prev));
+            prev = i;
+            isChanged = 1;
+            f++;
         }
-        g = getGx(A, n, N, i);
-
-        error += abs(f - g);
+        if (i % gap == 0) {
+            if (!isChanged) {
+                error += abs((f - g) * (i - prev));
+                prev = i;
+            }
+            g++;
+        }
     }
+    error += abs((f - g) * (N - prev));
     cout << error << endl;
 
     return 0;
