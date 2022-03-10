@@ -1,6 +1,6 @@
 SRCDIR = src
 OBJDIR = build
-CXX = clang++
+CXX = /usr/bin/clang++
 CXXFLAG = -Wall -std=c++11 -g
 
 FILES = $(shell ls ${SRCDIR})
