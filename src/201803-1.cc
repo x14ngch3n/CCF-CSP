@@ -2,14 +2,12 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int ins, last = 1, score = 0;
     int exit_flag = 0;
-    while (cin >> ins)
-    {
-        switch (ins)
-        {
+    while (cin >> ins) {
+        switch (ins) {
         case 0:
             exit_flag = 1;
             break;
@@ -27,8 +25,7 @@ int main(int argc, char const *argv[])
         default:
             break;
         }
-        if (exit_flag)
-        {
+        if (exit_flag) {
             break;
         }
     }

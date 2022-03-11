@@ -26,9 +26,9 @@ int main(int argc, char const* argv[])
     //     v2.insert(make_pair(index, value));
     // }
     // set<int> commonIndex;
-    // set_intersection(index1.begin(), index1.end(), index2.begin(), index2.end(), inserter(commonIndex, commonIndex.begin()));
-    // long long sum = 0;
-    // for (auto it = commonIndex.begin(); it != commonIndex.end(); it++) {
+    // set_intersection(index1.begin(), index1.end(), index2.begin(),
+    // index2.end(), inserter(commonIndex, commonIndex.begin())); long long sum =
+    // 0; for (auto it = commonIndex.begin(); it != commonIndex.end(); it++) {
     //     sum += v1[*it] * v2[*it];
     // }
 

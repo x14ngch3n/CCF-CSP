@@ -4,11 +4,10 @@
 using namespace std;
 
 // a looped one-way link list
-struct Kid
-{
+struct Kid {
     int id;
-    Kid *next;
-    Kid(int id, Kid *next)
+    Kid* next;
+    Kid(int id, Kid* next)
     {
         this->id = id;
         this->next = next;
@@ -20,7 +19,7 @@ bool isOut(int n, int k)
     return (n % k == 0) || (n % 10 == k);
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n, k;
     cin >> n >> k;
@@ -58,16 +57,13 @@ int main(int argc, char const *argv[])
     // using STL: queue
     int cnt = 1;
     queue<int> q;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         q.push(i);
     }
-    while (q.size() > 1)
-    {
+    while (q.size() > 1) {
         int num = q.front();
         q.pop();
-        if (!isOut(cnt, k))
-        {
+        if (!isOut(cnt, k)) {
             q.push(num);
         }
         cnt++;

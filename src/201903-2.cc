@@ -1,6 +1,6 @@
 #include <iostream>
-#include <stack>
 #include <map>
+#include <stack>
 
 using namespace std;
 
@@ -10,20 +10,13 @@ string toRPN(string e)
 {
     stack<int> opcodes;
     stack<int> oprands;
-    for (int i = 0; i < e.size(); i++)
-    {
-        if (isdigit(e[i]))
-        {
+    for (int i = 0; i < e.size(); i++) {
+        if (isdigit(e[i])) {
             oprands.push(e[i]);
-        }
-        else if (opcodes.empty())
-        {
+        } else if (opcodes.empty()) {
             opcodes.push(e[i]);
-        }
-        else
-        {
-            while (!opcodes.empty() && opcode[e[i]] <= opcode[opcodes.top()])
-            {
+        } else {
+            while (!opcodes.empty() && opcode[e[i]] <= opcode[opcodes.top()]) {
                 int tmp = opcodes.top();
                 opcodes.pop();
                 oprands.push(tmp);
@@ -31,15 +24,13 @@ string toRPN(string e)
             opcodes.push(e[i]);
         }
     }
-    while (!opcodes.empty())
-    {
+    while (!opcodes.empty()) {
         int tmp = opcodes.top();
         opcodes.pop();
         oprands.push(tmp);
     }
     char rpn[7];
-    for (int i = 0; i < 7; i++)
-    {
+    for (int i = 0; i < 7; i++) {
         int tmp = oprands.top();
         oprands.pop();
         rpn[6 - i] = tmp;
@@ -51,20 +42,15 @@ string toRPN(string e)
 int evalRPN(string rpn)
 {
     stack<int> ops;
-    for (int i = 0; i < rpn.size(); i++)
-    {
-        if (isdigit(rpn[i]))
-        {
+    for (int i = 0; i < rpn.size(); i++) {
+        if (isdigit(rpn[i])) {
             ops.push(rpn[i] - '0');
-        }
-        else
-        {
+        } else {
             int op1 = ops.top();
             ops.pop();
             int op2 = ops.top();
             ops.pop();
-            switch (rpn[i])
-            {
+            switch (rpn[i]) {
             case '+':
                 ops.push(op1 + op2);
                 break;
@@ -89,7 +75,7 @@ int evalRPN(string rpn)
     return ops.top();
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n;
     cin >> n;
@@ -97,8 +83,7 @@ int main(int argc, char const *argv[])
     opcode.insert(pair<int, int>('-', 0));
     opcode.insert(pair<int, int>('x', 1));
     opcode.insert(pair<int, int>('/', 1));
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         string e, rpn;
         cin >> e;
         rpn = toRPN(e);

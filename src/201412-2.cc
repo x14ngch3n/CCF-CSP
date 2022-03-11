@@ -2,50 +2,35 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n;
     cin >> n;
     int matrix[n][n];
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             cin >> matrix[i][j];
         }
     }
     int trace[2 * n - 1], order = 1;
-    for (int i = 0; i < 2 * n - 1; i++)
-    {
+    for (int i = 0; i < 2 * n - 1; i++) {
         trace[i] = i;
     }
-    for (int i = 0; i < 2 * n - 1; i++)
-    {
-        if (order == 0)
-        {
-            for (int x = 0; x <= trace[i]; x++)
-            {
-                if (x >= n || trace[i] - x >= n)
-                {
+    for (int i = 0; i < 2 * n - 1; i++) {
+        if (order == 0) {
+            for (int x = 0; x <= trace[i]; x++) {
+                if (x >= n || trace[i] - x >= n) {
                     continue;
-                }
-                else
-                {
+                } else {
                     cout << matrix[x][trace[i] - x] << " ";
                 }
             }
             order = 1;
-        }
-        else if (order == 1)
-        {
-            for (int y = 0; y <= trace[i]; y++)
-            {
-                if (y >= n || trace[i] - y >= n)
-                {
+        } else if (order == 1) {
+            for (int y = 0; y <= trace[i]; y++) {
+                if (y >= n || trace[i] - y >= n) {
                     continue;
-                }
-                else
-                {
+                } else {
                     cout << matrix[trace[i] - y][y] << " ";
                 }
             }

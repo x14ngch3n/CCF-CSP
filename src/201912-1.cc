@@ -12,25 +12,20 @@ bool skip(int n)
         return false;
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n;
     cin >> n;
-    int skips[4] = {0};
+    int skips[4] = { 0 };
     int i = 0, count = 0;
-    while (++i && count < n)
-    {
-        if (skip(i))
-        {
+    while (++i && count < n) {
+        if (skip(i)) {
             skips[(i - 1) % 4]++;
-        }
-        else
-        {
+        } else {
             count++;
         }
     }
-    for (int i = 0; i < 4; i++)
-    {
+    for (int i = 0; i < 4; i++) {
         cout << skips[i] << endl;
     }
     return 0;

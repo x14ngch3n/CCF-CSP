@@ -1,7 +1,8 @@
+#include <math.h>
+
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <math.h>
 
 using namespace std;
 
@@ -19,14 +20,13 @@ bool closer(const vector<int> pos1, const vector<int> pos2)
         return dist1 < dist2;
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int n;
     cin >> n >> dst[0] >> dst[1];
-    vector<vector<int> > pos(n);
+    vector<vector<int>> pos(n);
     int x, y;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         cin >> x >> y;
         pos[i].push_back(x);
         pos[i].push_back(y);
