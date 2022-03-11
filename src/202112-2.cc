@@ -2,36 +2,67 @@
 
 using namespace std;
 
-#define MAX_LEN 100000
+#define ll long long
 
 int main(int argc, char const* argv[])
 {
-    int n, N;
+    ll n, N;
     cin >> n >> N;
-    int A[MAX_LEN] = { 0 };
-    for (int i = 1; i <= n; i++) {
+    ll A[n];
+    for (int i = 0; i < n; i++) {
         cin >> A[i];
     }
-    // two pointer, O(N), still TLE
-    int error = 0, gap = N / (n + 1);
-    int f = 0, g = 0, prev = 0;
-    for (int i = 1; i < N; i++) {
-        int isChanged = 0;
-        if (i == A[f + 1]) {
-            error += abs((f - g) * (i - prev));
-            prev = i;
-            isChanged = 1;
-            f++;
+    ll gap = N / (n + 1);
+    ll len = (N % gap == 0) ? (N / gap) - 1 : (N / gap);
+    ll G[len];
+    for (ll i = 0; i < len; i++) {
+        G[i] = gap * (i + 1);
+    }
+
+    // merge to one array, 0 for A, 1 for G
+    vector<pair<ll, ll>> AG;
+    AG.push_back(make_pair(0, 0));
+    ll i = 0, j = 0;
+    while (i < n && j < len) {
+        if (A[i] == G[j]) {
+            AG.push_back(make_pair(A[i], 2));
+            i++;
+            j++;
+        } else if (A[i] > G[j]) {
+            AG.push_back(make_pair(G[j], 1));
+            j++;
+        } else if (A[i] < G[j]) {
+            AG.push_back(make_pair(A[i], 0));
+            i++;
         }
-        if (i % gap == 0) {
-            if (!isChanged) {
-                error += abs((f - g) * (i - prev));
-                prev = i;
-            }
+    }
+    if (i == n) {
+        while (j < len) {
+            AG.push_back(make_pair(G[j], 1));
+            j++;
+        }
+    } else if (j == len) {
+        while (i < n) {
+            AG.push_back(make_pair(A[i], 0));
+            i++;
+        }
+    }
+
+    // traverse AG to computer the diff at each stage
+    ll error = 0, f = 0, g = 0;
+    for (ll i = 1; i < AG.size(); i++) {
+        error += abs((f - g) * (AG[i].first - AG[i - 1].first));
+        if (AG[i].second == 0) {
+            f++;
+        } else if (AG[i].second == 1) {
+            g++;
+        } else if (AG[i].second == 2) {
+            f++;
             g++;
         }
     }
-    error += abs((f - g) * (N - prev));
+
+    error += abs((f - g) * (N - AG[AG.size() - 1].first));
     cout << error << endl;
 
     return 0;

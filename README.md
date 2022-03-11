@@ -2,6 +2,8 @@
 
 Solutions and instructions for CCF-CSP mocking test
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cascades-sjtu/CCF-CSP/Makefile%20CI)
+
 ## Useful Links
 
 * [CCF-CSP模拟测试题库](http://118.190.20.162/home.html)
@@ -51,4 +53,4 @@ make 20XXXX-X
 | 202012 | ✅ | ✅ | | | |
 | 202104 | ✅ | ✅ | | | |
 | 202109 | ✅ | ✅ | | | |
-| 202112 | ✅ | | | | |
+| 202112 | ✅ | ✅ | | | |
