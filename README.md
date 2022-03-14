@@ -3,7 +3,7 @@
 Solutions and instructions for CCF-CSP mocking test
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cascades-sjtu/CCF-CSP/Makefile%20CI)
-![Lines of code](https://img.shields.io/tokei/lines/github/cascades-sjtu/CCF-CSP.git)
+![Lines of code](a good url)
 
 ## Useful Links
 
